@@ -3,15 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ie preview testing</title>
+    <style>
+        #previmg{
+            border:1px dashed #ccc;
+        }
+    </style>
     <script src="index.js" type="text/javascript"></script>
 </head>
 <body>
 <h1>ie preview testing</h1>
-<input type="file" name="logofile" class="txtbox" onChange="PreviewImg(this)" />
+
+<h3>image preview: (*.gif,*.jpg,*.jpeg,*.png,*.svg)</h3>
+<input type="file" name="imgfile" onchange="PreviewImg(this)" />
 <br/>
 <br/>
-<img id="previmg" src="#" alt="图片预览区" width="600px" height="600px"/>
+<img id="previmg" src="#" alt="图片预览区" width="600px" height="400px"/>
+<br/>
+<h3>byte stream preview: (*.pdf)</h3>
+<input type="file" name="streamfile"  onchange="PreviewStream(this)">
+<br/>
+save file or open blob in browser
 </body>
 </html>
